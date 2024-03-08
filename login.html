@@ -41,8 +41,9 @@
   
       <div class="hero_bg_box">
         <div class="bg_img_box">
-          <style>.log{
-            background: lightblue;
+          <style>
+          .log{
+            background: rgba(24, 23, 23, 0.769);
             
           }</style>
         </div>
@@ -89,22 +90,31 @@
           </nav>
         </div>
       </header>
-      <div class="login-container">
-        <h2>Login</h2>
-        <form action="#" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <div class="remember-me">
-                <input type="checkbox" id="rememberMe" name="rememberMe">
-                <div class="checkbox-container">
-                    <div class="checkbox-icon"></div>
-                </div>
-                <label for="rememberMe">Remember Me</label>
-            </div>
-            <button type="submit">Login</button>
-        </form>
-        <p><a href="#">Forgot Password?</a></p>
-        <p>Don't have an account? <a href="#">Register</a></p>
-    </div>
+<body>
+  <div class="login-container">
+    <form action="" method="post" id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <div class="remember-forgot">
+            <label for="rememberMe">
+                <input type="checkbox" id="rememberMe" name="rememberMe"> Remember Me
+            </label>
+
+            <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+        </div>
+
+        <button type="button" onclick="validateLogin()">Login</button>
+    </form>
+</div>
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>
+
 </body>
 </html>
