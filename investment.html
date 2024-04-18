@@ -122,9 +122,7 @@
 
   <!-- end about section -->
 
-  <!-- info section -->
-
-  <section class="info_section layout_padding2">
+  <!-- end info section --> <section class="info_section layout_padding2">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-lg-3 info_col">
@@ -139,18 +137,20 @@
                   Location
                 </span>
               </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href=mailto:"sales@decodedsolution.com">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  sales@decodedsolution.com
-                </span>
-              </a>
+              <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                <div class="elfsight-app-07bb8600-0438-4e2f-bca7-2a916594fe08" data-elfsight-app-lazy></div>
+                <a href="tel:8325445304">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span>
+                    Call +01 (832)544-5304
+                  </span>
+                </a>
+                <a href=mailto:sales@decodedsolution.com>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span>
+                    sales@decodedsolution.com
+                  </span>
+                </a>
             </div>
           </div>
           <div class="info_social">
@@ -174,7 +174,7 @@
               Info
             </h4>
             <p>
-              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+              
             </p>
           </div>
         </div>
@@ -191,7 +191,7 @@
                 About
               </a>
               <a class="" href="service.html">
-                Services
+                Portifolio
               </a>
               <a class="" href="why.html">
                 Why Us
@@ -203,11 +203,10 @@
           <h4>
             Subscribe
           </h4>
-          <form action="#">
-            <input type="text" placeholder="Enter email" />
-            <button type="submit">
-              Subscribe
-            </button>
+          <form action="subscribe.php" method="post">
+            <label for="email"></label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Subscribe</button>
           </form>
         </div>
       </div>
@@ -221,7 +220,7 @@
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        <a href="#">DecodedSolution</a>
       </p>
     </div>
   </section>
