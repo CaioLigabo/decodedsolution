@@ -45,20 +45,23 @@ function myMap() {
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
 
-// Mobile menu toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
-const navClose = document.querySelector('.nav-close');
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const navClose = document.querySelector('.nav-close');
 
-navToggle.addEventListener('click', () => {
-  navToggle.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});
+  if (navToggle && navMenu && navClose) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
 
-// Mobile menu close button
-navClose.addEventListener('click', () => {
-  navToggle.classList.remove('active');
-  navMenu.classList.remove('active');
+    navClose.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  }
 });
 
 // Dropdown functionality (desktop hover)

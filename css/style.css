@@ -3159,19 +3159,30 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: none;
-  border: none;
+  background: var(--gray-100);
+  border: 2px solid var(--gray-300);
   font-size: 1.5rem;
-  color: var(--gray-600);
+  color: var(--gray-700);
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border-radius: 50%;
   transition: all 0.3s ease;
   z-index: 2001;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
 }
 
 .nav-close:hover {
   color: var(--primary);
-  background: var(--gray-100);
+  background: var(--gray-200);
   transform: scale(1.1);
+  border-color: var(--primary);
+}
+
+.nav-close:active {
+  transform: scale(0.95);
 }
