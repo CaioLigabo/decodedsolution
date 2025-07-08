@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="consultation, business strategy, safety design, investment solutions, professional services" />
+  <meta name="description" content="DecodedSolution: Professional Consultation Booking - Schedule your free consultation for business strategy, safety design, or investment solutions" />
+  <meta name="author" content="DecodedSolution" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+  <title>Book Consultation - DecodedSolution</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <!-- <link href="css/responsive.css" rel="stylesheet" /> -->
+
+  <!-- EmailJS for automatic email sending -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <!-- Main Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <img src="images/logo1.jpeg" alt="DecodedSolution Logo">
+          <div class="brand-text">
+            <span class="brand-name">DecodedSolution</span>
+            <span class="brand-tagline">Professional Solutions</span>
+          </div>
+        </div>
+        
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="fas fa-home"></i>
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              <i class="fas fa-info-circle"></i>
+              About
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="service.html" class="nav-link">
+              <i class="fas fa-briefcase"></i>
+              Services
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="business.html">Business Strategy</a></li>
+              <li><a href="safetydesign.html">Safety Design</a></li>
+              <li><a href="investment.html">Investment Solutions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="why.html" class="nav-link">
+              <i class="fas fa-star"></i>
+              Why Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="consultation.html" class="nav-link cta-btn">
+              <i class="fas fa-phone"></i>
+              Contact
+            </a>
+          </li>
+        </ul>
+        
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="page-badge">Professional Consultation</span>
+        <h1 class="page-title">Schedule Your Free Consultation</h1>
+        <p class="page-subtitle">
+          Get expert guidance on business strategy, safety design, or investment solutions from our experienced consultants
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Form Section -->
+  <section class="consultation-section">
+    <div class="container">
+      <div class="consultation-content">
+        <div class="consultation-info">
+          <span class="section-badge">Why Choose Us</span>
+          <h2>Expert Consultation Services</h2>
+          <p class="consultation-intro">
+            Our experienced consultants provide personalized solutions tailored to your specific needs. Whether you need business strategy guidance, safety design expertise, or investment solutions, we're here to help you succeed.
+          </p>
+          
+          <div class="consultation-benefits">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="benefit-content">
+                <h4>Free Initial Consultation</h4>
+                <p>No cost for your first consultation to discuss your needs and explore solutions.</p>
+              </div>
+            </div>
+            
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="benefit-content">
+                <h4>Expert Consultants</h4>
+                <p>20+ years of experience across business strategy, safety design, and investment solutions.</p>
+              </div>
+            </div>
+            
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="benefit-content">
+                <h4>Confidential & Secure</h4>
+                <p>Your information is protected with the highest standards of confidentiality and security.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="consultation-form-container">
+          <div class="consultation-form">
+            <h3>Book Your Consultation</h3>
+            <p>Fill out the form below and we'll get back to you within 24 hours to schedule your consultation.</p>
+            
+            <form class="booking-form" id="consultationForm">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+              
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company">
+              </div>
+              
+              <div class="form-group">
+                <label for="service">Service Interest *</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option value="business-strategy">Business Strategy & Consulting</option>
+                  <option value="safety-design">Safety Design & Fire Systems</option>
+                  <option value="investment-solutions">Investment Solutions</option>
+                  <option value="multiple">Multiple Services</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="projectSize">Project Size</label>
+                <select id="projectSize" name="projectSize">
+                  <option value="">Select project size</option>
+                  <option value="small">Small Project (< $50K)</option>
+                  <option value="medium">Medium Project ($50K - $500K)</option>
+                  <option value="large">Large Project ($500K+)</option>
+                  <option value="enterprise">Enterprise Level</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="timeline">Preferred Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Select timeline</option>
+                  <option value="immediate">Immediate (Within 1 month)</option>
+                  <option value="short-term">Short Term (1-3 months)</option>
+                  <option value="medium-term">Medium Term (3-6 months)</option>
+                  <option value="long-term">Long Term (6+ months)</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Project Description *</label>
+                <textarea id="message" name="message" rows="4" placeholder="Please describe your project or consultation needs..." required></textarea>
+              </div>
+              
+              <div class="form-group">
+                <label for="preferredContact">Preferred Contact Method</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input type="radio" name="preferredContact" value="email" checked>
+                    <span class="radio-custom"></span>
+                    Email
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="preferredContact" value="phone">
+                    <span class="radio-custom"></span>
+                    Phone
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="preferredContact" value="video">
+                    <span class="radio-custom"></span>
+                    Video Call
+                  </label>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" value="yes">
+                  <span class="checkbox-custom"></span>
+                  Subscribe to our newsletter for industry insights and updates
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-large">
+                <i class="fas fa-paper-plane"></i>
+                Submit Consultation Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect Section -->
+  <section class="expectations-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">What to Expect</span>
+        <h2>Your Consultation Journey</h2>
+        <p>Here's what happens when you book a consultation with DecodedSolution</p>
+      </div>
+      
+      <div class="expectations-grid">
+        <div class="expectation-step">
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <h3>Schedule Consultation</h3>
+          <p>Submit your consultation request and we'll confirm your appointment within 24 hours.</p>
+        </div>
+        
+        <div class="expectation-step">
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Initial Discussion</h3>
+          <p>We'll discuss your needs, challenges, and goals to understand your project requirements.</p>
+        </div>
+        
+        <div class="expectation-step">
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>Solution Development</h3>
+          <p>Our experts will develop tailored solutions and recommendations for your specific situation.</p>
+        </div>
+        
+        <div class="expectation-step">
+          <div class="step-number">04</div>
+          <div class="step-icon">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h3>Proposal & Next Steps</h3>
+          <p>Receive a detailed proposal with clear next steps and implementation timeline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="images/logo1.jpeg" alt="DecodedSolution Logo">
+            <span>DecodedSolution</span>
+          </div>
+          <p>Professional business solutions with 20+ years of experience in strategic initiatives, 
+             safety design, and investment consultancy.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Global Operations</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+18325443558">+01 (832) 544-3558</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:sales@decodedsolution.com">sales@decodedsolution.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Portfolio</a></li>
+            <li><a href="why.html">Why Choose Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Stay updated with our latest insights and industry trends.</p>
+          <form class="newsletter-form" action="subscribe.php" method="post">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="displayYear"></span> DecodedSolution. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+  
+  <script>
+    // Initialize EmailJS
+    (function() {
+      emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+    })();
+    
+    // Update year in footer
+    document.getElementById('displayYear').textContent = new Date().getFullYear();
+    
+    // Mobile menu toggle
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('active');
+      this.classList.toggle('active');
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Professional form handling with automatic email sending
+    document.getElementById('consultationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Basic validation
+      const requiredFields = this.querySelectorAll('[required]');
+      let isValid = true;
+      
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          field.classList.add('error');
+          isValid = false;
+        } else {
+          field.classList.remove('error');
+        }
+      });
+      
+      if (isValid) {
+        // Show loading state
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        // Collect form data
+        const formData = new FormData(this);
+        
+        // Prepare email template parameters
+        const templateParams = {
+          to_name: "DecodedSolution Team",
+          from_name: formData.get('fullName'),
+          from_email: formData.get('email'),
+          phone: formData.get('phone') || 'Not provided',
+          company: formData.get('company') || 'Not provided',
+          service: formData.get('service'),
+          project_size: formData.get('projectSize') || 'Not specified',
+          timeline: formData.get('timeline') || 'Not specified',
+          message: formData.get('message'),
+          preferred_contact: formData.get('preferredContact'),
+          newsletter: formData.get('newsletter') || 'No',
+          reference_id: generateReferenceId()
+        };
+        
+        // Send email automatically
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+          .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            
+            // Show success message
+            showSuccessMessage(templateParams.reference_id);
+            
+            // Reset form
+            document.getElementById('consultationForm').reset();
+            
+            // Reset button state
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            
+          }, function(error) {
+            console.log('FAILED...', error);
+            
+            // Show error message
+            alert('Sorry, there was an error sending your request. Please try again or contact us directly.');
+            
+            // Reset button state
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          });
+      } else {
+        alert('Please fill in all required fields.');
+      }
+    });
+    
+    // Generate unique reference ID
+    function generateReferenceId() {
+      const timestamp = Date.now().toString(36);
+      const random = Math.random().toString(36).substr(2, 5);
+      return `DS-${timestamp}-${random}`.toUpperCase();
+    }
+    
+    // Show professional success message
+    function showSuccessMessage(referenceId) {
+      const successDiv = document.createElement('div');
+      successDiv.className = 'success-message';
+      successDiv.innerHTML = `
+        <div class="success-content">
+          <i class="fas fa-check-circle"></i>
+          <h3>Thank You!</h3>
+          <p>Your consultation request has been successfully submitted.</p>
+          <p>We will contact you within 24 hours to schedule your consultation.</p>
+          <p><strong>Reference ID:</strong> ${referenceId}</p>
+        </div>
+      `;
+      
+      document.body.appendChild(successDiv);
+      
+      // Remove after 5 seconds
+      setTimeout(() => {
+        successDiv.remove();
+      }, 5000);
+    }
+  </script>
+
+  <style>
+    /* Success message styling */
+    .success-message {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    .success-content {
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 500px;
+      margin: 2rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    
+    .success-content i {
+      font-size: 4rem;
+      color: var(--success);
+      margin-bottom: 1rem;
+    }
+    
+    .success-content h3 {
+      color: var(--dark);
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+    }
+    
+    .success-content p {
+      color: var(--gray-600);
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    /* Add success color variable */
+    :root {
+      --success: #10b981;
+    }
+  </style>
+
+</body>
+
+</html> 
