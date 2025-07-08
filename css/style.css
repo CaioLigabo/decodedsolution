@@ -3153,3 +3153,25 @@ body {
 .dropdown.open .dropdown-menu {
   display: none;
 }
+
+/* Mobile menu close button */
+.nav-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--gray-600);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 2001;
+}
+
+.nav-close:hover {
+  color: var(--primary);
+  background: var(--gray-100);
+  transform: scale(1.1);
+}

@@ -48,10 +48,17 @@ function myMap() {
 // Mobile menu toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
+const navClose = document.querySelector('.nav-close');
 
 navToggle.addEventListener('click', () => {
   navToggle.classList.toggle('active');
   navMenu.classList.toggle('active');
+});
+
+// Mobile menu close button
+navClose.addEventListener('click', () => {
+  navToggle.classList.remove('active');
+  navMenu.classList.remove('active');
 });
 
 // Dropdown functionality (desktop hover)
