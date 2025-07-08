@@ -1075,32 +1075,7 @@ body {
   }
   
   .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    border: none;
-    background: var(--gray-50);
-    margin-top: 0.5rem;
-    display: none;
-  }
-  
-  .dropdown-menu[style*="display: block"] {
-    display: block !important;
-  }
-  
-  .dropdown-menu li {
-    border-bottom: 1px solid var(--gray-200);
-  }
-  
-  .dropdown-menu a {
-    padding: 0.75rem 1rem;
-    color: var(--gray-700);
-    display: block;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .dropdown-menu a:hover {
-    background-color: var(--gray-100);
+    display: none !important;
   }
   
   .hero {
@@ -1160,10 +1135,7 @@ body {
   }
   
   .dropdown-menu {
-    display: none;
-  }
-  .dropdown-menu[style*="display: block"] {
-    display: block !important;
+    display: none !important;
   }
 }
 
