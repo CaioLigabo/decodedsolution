@@ -231,12 +231,43 @@ body {
 }
 
 .dropdown-menu {
-  position: static;
-  box-shadow: none;
-  border: none;
-  background: var(--gray-50);
-  margin-top: 0.5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  min-width: 200px;
+  z-index: 1000;
   display: none;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+}
+
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+}
+
+.dropdown-menu::after {
+  content: '';
+  position: absolute;
+  top: -9px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--gray-200);
+  z-index: -1;
 }
 
 .dropdown-menu[style*="display: block"] {
@@ -957,7 +988,7 @@ body {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 100%;
+    top: 0;
     flex-direction: column;
     background-color: white;
     width: 100%;
@@ -966,6 +997,7 @@ body {
     box-shadow: var(--shadow-lg);
     padding: 2rem 0;
     border-top: 1px solid var(--gray-200);
+    z-index: 2000;
   }
   
   .nav-menu.active {
@@ -3077,4 +3109,14 @@ body {
   .expectation-step {
     padding: 1.5rem 1rem;
   }
+}
+
+/* Remove hover-to-open for dropdowns */
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Remove the .open class rules */
+.dropdown.open .dropdown-menu {
+  display: none;
 }
