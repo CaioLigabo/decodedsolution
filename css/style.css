@@ -1054,6 +1054,13 @@ body {
   .newsletter-form {
     flex-direction: column;
   }
+  
+  .dropdown-menu {
+    display: none;
+  }
+  .dropdown-menu[style*="display: block"] {
+    display: block !important;
+  }
 }
 
 @media (max-width: 480px) {

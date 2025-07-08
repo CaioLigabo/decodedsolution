@@ -44,3 +44,57 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
+
+// Mobile menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle.addEventListener('click', () => {
+  navToggle.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+
+// Dropdown functionality (desktop hover)
+const dropdowns = document.querySelectorAll('.dropdown');
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('mouseenter', () => {
+    if (window.innerWidth > 768) {
+      dropdown.querySelector('.dropdown-menu').style.display = 'block';
+    }
+  });
+  dropdown.addEventListener('mouseleave', () => {
+    if (window.innerWidth > 768) {
+      dropdown.querySelector('.dropdown-menu').style.display = 'none';
+    }
+  });
+});
+
+// Mobile dropdown toggle
+const dropdownLinks = document.querySelectorAll('.dropdown > .nav-link');
+dropdownLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      const dropdownMenu = this.nextElementSibling;
+      if (dropdownMenu.style.display === 'block') {
+        dropdownMenu.style.display = 'none';
+      } else {
+        // Close other open dropdowns
+        document.querySelectorAll('.dropdown-menu').forEach(menu => menu.style.display = 'none');
+        dropdownMenu.style.display = 'block';
+      }
+    }
+  });
+});
+
+// Optional: Close menu when a link is clicked (for better UX)
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function() {
+    if (window.innerWidth <= 768) {
+      document.querySelector('.nav-menu').classList.remove('active');
+      document.querySelector('.nav-toggle').classList.remove('active');
+      // Close all dropdowns
+      document.querySelectorAll('.dropdown-menu').forEach(menu => menu.style.display = 'none');
+    }
+  });
+});
