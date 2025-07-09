@@ -317,15 +317,19 @@ body {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  padding: 0.75rem;
+  padding: 1rem;
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 8px;
   box-shadow: var(--shadow-md);
   z-index: 2001;
+  min-width: 50px;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-toggle span {
@@ -1011,6 +1015,10 @@ body {
   .nav-toggle {
     display: flex !important;
     z-index: 2001;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    transform: none;
   }
   
   .nav-menu {
