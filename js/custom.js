@@ -50,19 +50,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
 
-  console.log('Nav toggle found:', navToggle);
-  console.log('Nav menu found:', navMenu);
-
   if (navToggle && navMenu) {
     navToggle.addEventListener('click', (e) => {
-      console.log('Hamburger clicked!');
       e.preventDefault();
       e.stopPropagation();
       navToggle.classList.toggle('active');
       navMenu.classList.toggle('active');
     });
-  } else {
-    console.log('Nav toggle or menu not found!');
   }
 
   // Dropdown functionality (desktop hover)
